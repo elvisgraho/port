@@ -1,0 +1,12 @@
+.stage {
+  display: block;
+  width: 100%;
+  height: 55%;
+
+  background-color: red;
+  
+
+  @include desktop {
+    background-color: plum;
+  }
+}

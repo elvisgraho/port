@@ -3,6 +3,7 @@ import { Router } from 'preact-router';
 
 import Header from './header';
 import ContactBox from './contactBox';
+import Stage from './stage';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
@@ -21,12 +22,17 @@ export default class App extends Component {
 	render() {
 		return (
 			<div id="app">
+				<Stage />
 				<Header />
-				<Router onChange={this.handleRoute}>
-					<Home path="/" />
-					<Profile path="/profile/" user="me" />
-					<Profile path="/profile/:user" />
-				</Router>
+
+				<div class="router-section">
+					<Router onChange={this.handleRoute}>
+						<Home path="/" />
+						<Profile path="/profile/" user="me" />
+						<Profile path="/profile/:user" />
+					</Router>
+				</div>
+
 				<ContactBox />
 			</div>
 		);
