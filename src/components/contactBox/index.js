@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { Mail } from 'preact-feather';
+import { Crosshair } from 'preact-feather';
 import style from './style';
 
 
@@ -20,18 +21,31 @@ export default class ContactBox extends Component {
     return this.state.visible ? " visible" : " hidden";
   }
 
+  copyToClipboard = () => {
+    navigator.clipboard.writeText("someEmail");
+  }
+
   render() {
     return (
       <section class={"contact-box"}>
 
         <div class={"contact-box__info" + this.getStateClass()}>
-          Here is the full information
-          <Mail size={20} />
+          <div class="contact-box__close" onClick={this.toggleVisibility}>
+            <Crosshair size={20} />
+          </div>
+          <p>
+            Here is the full information
+          </p>
+          <div class="contact-box__copy">
+            Copy
+          </div>
         </div>
 
         <div class={"contact-box__heading"} onClick={this.toggleVisibility}>
-          <h4>Contact</h4>
+          <Mail size={20} />
+          <h4>Contact me</h4>
         </div>
+
       </section>
     );
   }
