@@ -1,6 +1,6 @@
 import { h, Component } from 'preact';
 import { Mail } from 'preact-feather';
-import { Crosshair } from 'preact-feather';
+import { XCircle } from 'preact-feather';
 import style from './style';
 
 
@@ -30,9 +30,9 @@ export default class ContactBox extends Component {
       <section class={"contact-box"}>
 
         <div class={"contact-box__info" + this.getStateClass()}>
-          <div class="contact-box__close" onClick={this.toggleVisibility}>
-            <Crosshair size={20} />
-          </div>
+
+          <div class="contact-box__close" onClick={this.toggleVisibility}></div>
+
           <p>
             Here is the full information
           </p>

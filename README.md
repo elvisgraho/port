@@ -22,7 +22,5 @@ npm run test
 For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
 
 
-[List](https://github.com/ForsakenHarmony/preact-feather/tree/master/src/icons) - full list of svg icons.
-
-
+[List](https://github.com/ForsakenHarmony/preact-feather/tree/master/src/icons) - full list of svg icons.  
 [Awesome](https://github.com/ooade/awesome-preact) - awesome preact links.

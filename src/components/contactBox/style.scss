@@ -29,13 +29,32 @@
   }
 
   &__info{
-    width: 300px;
+    
     height: 150px;
     position: absolute;
-    background-color: green;
+    overflow: hidden;
 
-    transform: translateY(-100%);
-    //top: -10px;
+  
+    transition: height .3s ease-in, top .3s ease-in, width .3s ease-in, left .3s ease-in;
+    height: 0;
+    width: 150px;
+
+    top: 0px;
+    left: 0px;
+
+
+    background-color: green;
+  }
+  .hidden {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .visible {
+    height: 150px;
+    width: 300px;
+
+    top: -150px;
     left: -150px;
   }
 }
