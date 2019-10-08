@@ -1,33 +1,52 @@
 @import '../../style/colors.scss';
+@import '../../style/mixins.scss';
 $height: 50px;
 
 .header {
 	position: relative;
 	width: 100%;
-	height: $height;
+	height: calc(#{$height} - 10px);
 	padding: 0;
 	background: $tertiary;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 	z-index: 50;
+
+	@include small {
+		height: $height;
+	}
 }
 
 .header nav {
 	font-size: 100%;
 	height: $height;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	@include small {
+	 justify-content: flex-start;
+	}
 }
 
 .header nav a {
 	display: inline-block;
 	height: 100%;
 	width: 120px;
-	line-height: $height;
-	padding: 0 20px;
+	line-height: calc(#{$height} - 10px);
+	padding: 0 5px;
 	font-size: 18px;
 	text-align: center;
 	background: rgba(255,255,255,0);
 	text-decoration: none;
 	color: #FFF;
 	will-change: background-color;
+
+	@include small {
+		padding: 0 20px;
+		line-height: $height;
+		font-size: 20px;
+	}
 }
 
 .header nav a:hover,

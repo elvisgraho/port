@@ -16,6 +16,8 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
   
 
   @include desktop {
@@ -70,10 +72,10 @@
   }
 
   @keyframes swing--big {
-    20% { transform: rotate(35deg); }
-    40% { transform: rotate(-25deg); }
-    60% { transform: rotate(20deg); }
-    80% { transform: rotate(-14deg); }
+    20% { transform: rotate(45deg); }
+    40% { transform: rotate(-35deg); }
+    60% { transform: rotate(30deg); }
+    80% { transform: rotate(-20deg); }
     100% { transform: rotate(0deg); }
   }
 
