@@ -19,7 +19,7 @@ export default class ContactBox extends Component {
   };
 
   getStateClass = () => {
-    return this.state.visible ? " visible" : " hidden";
+    return this.state.visible ? " contact-box--active" : "";
   }
 
   copyToClipboard = () => {
@@ -29,18 +29,18 @@ export default class ContactBox extends Component {
 
   render() {
     return (
-      <section class={"contact-box"}>
-
-        <div class={"contact-box__info" + this.getStateClass()}>
-          <p>{data.contact.text}</p>
-          <button class="contact-box__copy" onClick={this.copyToClipboard}>
-            {data.contact.clipboardText}
-          </button>
-        </div>
+      <section class={"contact-box" + this.getStateClass()}>
 
         <div class={"contact-box__heading"} onClick={this.toggleVisibility}>
           <Mail size={20} />
           <h4>{data.contact.btnText}</h4>
+        </div>
+
+        <div class={"contact-box__info"}>
+          <p>{data.contact.text}</p>
+          <button class="contact-box__copy" onClick={this.copyToClipboard}>
+            {data.contact.clipboardText}
+          </button>
         </div>
 
       </section>

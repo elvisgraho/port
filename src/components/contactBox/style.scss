@@ -1,12 +1,13 @@
 .contact-box{
   position: fixed;
-  width: 150px;
-  height: 30px;
-  right: 0px;
-  bottom: 0px;
+  width: 300px;
+  height: 180px;
+  right: -150px;
+  bottom: -150px;
 
-  background-color: pink;
   z-index: 90;
+
+  transition: bottom .2s ease-in, right .2s ease-in;
 
   h4 {
     display: inline-block;
@@ -22,9 +23,14 @@
     font-size: 18px;
   }
 
+  &--active{
+    bottom: 0px;
+    right: 0px;
+  }
+
   &__heading {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 30px;
     cursor: pointer;
 
     display: flex;
@@ -32,7 +38,9 @@
     justify-content: center;
     align-items: center;
 
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    background-color: pink;
+
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.5);
   }
 
 
@@ -41,38 +49,18 @@
   }
 
   &__info{
-    
     height: 150px;
-    position: absolute;
+    width: 300px;
+
+    position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    z-index: -1;
 
-  
-    transition: height .3s ease-in, top .3s ease-in, width .3s ease-in, left .3s ease-in;
-    height: 0;
-    width: 150px;
-
-    top: 0px;
-    left: 0px;
-
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-
-
-    background-color: green;
-  }
-  .hidden {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .visible {
-    height: 150px;
-    width: 300px;
-
-    top: -150px;
-    left: -150px;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
+    background-color: pink;
   }
 }
