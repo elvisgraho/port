@@ -1,17 +1,45 @@
 @import '../../style/colors.scss';
 
 .skill-card {
-  display: block;
+  display: flex;
   width: 300px;
   max-height: 500px;
   min-height: 310px;
 
-  margin: 0px 20px;
+  margin: 0px 10px;
   margin-top: 20px;
 
   background-color: $primary;
+
+  padding: 20px;
+
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   
 
   @include desktop {
+    margin: 0px 20px;
+    margin-top: 20px;
+  }
+
+  &-title {
+    font-size: 27px;
+    margin: 10px 0px;
+  }
+
+  &-text{
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 0px;
+  }
+
+  &__skills {
+    width: 100%;
+    padding: 0px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }

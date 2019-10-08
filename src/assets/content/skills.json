@@ -1,0 +1,40 @@
+{
+  "skills": [
+    {
+      "title": "Front-end",
+      "text": "visuals matter",
+      "skills": [
+        "HTML5/CSS3/JS",
+        "Another1",
+        "Another2"
+      ]
+    },
+    {
+      "title": "Back-end",
+      "text": "got data?",
+      "skills": [
+        "HTML5/CSS3/JS",
+        "Another1",
+        "Another2"
+      ]
+    },
+    {
+      "title": "DevOps",
+      "text": "and another cloud provider",
+      "skills": [
+        "HTML5/CSS3/JS",
+        "Another1",
+        "Another2"
+      ]
+    },
+    {
+      "title": "General",
+      "text": "when trying too hard",
+      "skills": [
+        "HTML5/CSS3/JS",
+        "Another1",
+        "Another2"
+      ]
+    }
+  ]
+}

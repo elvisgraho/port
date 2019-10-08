@@ -16,9 +16,13 @@ export default class SkillCard extends Component {
   render() {
     return (
       <section class={"skill-card"}>
-
-        blablabla
-
+        <h2 class="skill-card-title">{this.props.title}</h2>
+        <p class="skill-card-text">{this.props.text}</p>
+        <div class="skill-card__skills">
+          {this.props.skills && this.props.skills.map(skill => (
+            <p>{skill}</p>
+          ))}
+        </div>
       </section>
     );
   }

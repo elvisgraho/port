@@ -2,6 +2,8 @@ import { h, Component } from 'preact';
 import style from './style';
 import SkillCard from '../../components/skillCard';
 
+import * as skillsData from '../../assets/content/skills';
+
 export default class Skills extends Component {
 	state = {
 		time: Date.now(),
@@ -32,10 +34,9 @@ export default class Skills extends Component {
 	render({ user }, { time, count }) {
 		return (
 			<div class={style.skills}>
-				<SkillCard />
-				<SkillCard />
-				<SkillCard />
-				<SkillCard />
+				{skillsData.skills.map((skill) => {
+					return <SkillCard title={skill.title} text={skill.text} skills={skill.skills} />
+				})}
 			</div>
 		);
 	}
