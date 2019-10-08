@@ -118,7 +118,29 @@
 		flex-direction: row;
 		width: 100%;
 		height: 100%;
+		margin-left: 20px;
 
 		width: max-content;
+	}
+
+	&-arrow{
+		position: absolute;
+		display: flex;
+		height: 182px;
+		width: 30px;
+
+		cursor: pointer;
+		bottom: 29px;
+
+		background-color: red;
+		z-index: 20;
+
+
+		&--left{
+			left: 0;
+		}
+		&--right{
+			right: 0;
+		}
 	}
 }
