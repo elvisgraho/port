@@ -1,9 +1,6 @@
 import { h, Component } from 'preact';
 import { Anchor } from 'preact-feather';
 
-import * as data from '../../assets/content/general';
-
-
 export default class SkillCard extends Component {
 
   state = {
@@ -32,7 +29,6 @@ export default class SkillCard extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <section class={"skill-card"}>
         <Anchor size={22} onClick={this.onClick} class={this.state.swing ? this.state.swing : ""} />

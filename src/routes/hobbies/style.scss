@@ -20,13 +20,21 @@
 		padding-bottom: 20px;
 		flex-direction: row;
 	}
+
+	h2 {
+		display: inline-block;
+		text-align: left;
+		margin: 5px 0px;
+		font-size: 27px;
+		width: 100%;
+	}
 	
 	& > div {
 		display: flex;
 		max-height: 500px;
 		min-height: 310px;
 	
-		margin: 0px 10px;
+		margin: 0px 0px;
 		margin-top: 20px;
 	
 		background-color: $primary;
@@ -34,7 +42,7 @@
 		padding: 20px;
 	
 		justify-content: flex-start;
-		align-items: center;
+		align-items: flex-start;
 		flex-direction: column;
 		flex-wrap: wrap;
 	
@@ -59,13 +67,58 @@
 	&__small {
 		flex: 1;
 		min-width: 300px;
-		max-width: 400px;
+		max-width: 350px;
+
+		p {
+			font-size: 18px;
+			margin: 5px 0px;
+		}
+
 	}
 
 	&__large {
 		flex: 2;
 		min-width: 300px;
-		max-width: 900px;
+		max-width: 800px;
 		width: calc(100% - 20px);
+
+		h5{
+			font-style: italic;
+			margin-top: 0px;
+		}
+		
+		.hobbies-title{
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+
+			svg {
+				margin-left: 20px;
+				margin-top: 6px;
+			}
+		}
+
+		overflow: hidden;
+	}
+
+	&__interests {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		margin-top: 20px;
+
+		p:last-child {
+			font-style: italic;
+			font-size: 16px;
+		}
+	}
+
+	&__music {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: 100%;
+
+		width: max-content;
 	}
 }

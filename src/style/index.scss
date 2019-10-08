@@ -57,8 +57,9 @@ html, body {
 
 @import './general.scss';
 @import './mixins.scss';
+@import '../routes/hobbies/style.scss';
+@import '../routes/random/style.scss';
 @import '../components/contactBox/style.scss';
 @import '../components/stage/style.scss';
 @import '../components/skillCard/style.scss';
-@import '../routes/hobbies/style.scss';
-@import '../routes/random/style.scss';
+@import '../components/videoCard/style.scss';

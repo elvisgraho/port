@@ -1,6 +1,8 @@
 import { h, Component } from 'preact';
+import { Youtube } from 'preact-feather';
+import VideoCard from '../../components/videoCard';
 
-import * as skillsData from '../../assets/content/skills';
+import * as hobbiesData from '../../assets/content/hobbies';
 
 export default class Hobbies extends Component {
 
@@ -12,10 +14,25 @@ export default class Hobbies extends Component {
 		return (
 			<div class="hobbies">
 				<div class="hobbies__small">
-					hs
+					<h2 class="hobbies-title">
+						{hobbiesData.first.title}
+					</h2>
+					<div class="hobbies__interests">
+						{hobbiesData.first.interests && hobbiesData.first.interests.map((int) => {
+							return <p>{int}</p>
+						})}
+					</div>
 				</div>
 				<div class="hobbies__large">
-					hl
+					<h2 class="hobbies-title">
+						{hobbiesData.second.title} <Youtube />
+					</h2>
+					<h5>{hobbiesData.second.subtitle}</h5>
+					<div class="hobbies__music">
+						{hobbiesData.second.music && hobbiesData.second.music.map((song) => {
+							return <VideoCard title={song.title} subtitle={song.subtitle} imgSrc={song.imgSrc} />
+						})}
+					</div>
 				</div>
 			</div>
 		);

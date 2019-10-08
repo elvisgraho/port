@@ -1,0 +1,42 @@
+{
+  "first": {
+    "title": "My interests",
+    "interests": [
+      "sports",
+      "music",
+      "electric guitar",
+      "running",
+      "trying to list more hobbies by differentiating between sports and running"
+    ]
+  },
+  "second": {
+    "title": "Check out my music",
+    "subtitle": "prepare your ears",
+    "music": [
+      {
+        "imgSrc": "https://picsum.photos/600",
+        "videoUrl": "blablabla",
+        "title": "blah",
+        "subtitle": "fffff"
+      },
+      {
+        "imgSrc": "https://picsum.photos/600",
+        "videoUrl": "blablabla",
+        "title": "blah",
+        "subtitle": "fffff"
+      },
+      {
+        "imgSrc": "https://picsum.photos/600",
+        "videoUrl": "blablabla",
+        "title": "blah",
+        "subtitle": "fffff"
+      },
+      {
+        "imgSrc": "https://picsum.photos/600",
+        "videoUrl": "blablabla",
+        "title": "blah",
+        "subtitle": "fffff"
+      }
+    ]
+  }
+}
