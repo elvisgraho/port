@@ -6,12 +6,9 @@ import * as data from '../../assets/content/general';
 
 export default class ContactBox extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      visible: false,
-      contactText: data.contact.text.split("\n")
-    }
+  state = {
+    visible: false,
+    contactText: data.contact.text.split("\n")
   }
 
   toggleVisibility = e => {
