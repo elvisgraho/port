@@ -24,11 +24,10 @@ html, body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
 .router-section {
-	height: calc(48% - 50px);
+	flex: 1;
 }
 
 .visible {
@@ -60,3 +59,4 @@ html, body {
 @import './mixins.scss';
 @import '../components/contactBox/style.scss';
 @import '../components/stage/style.scss';
+@import '../components//skillCard/style.scss';

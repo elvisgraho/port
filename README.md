@@ -24,4 +24,6 @@ For detailed explanation on how things work, checkout the [CLI Readme](https://g
 
 [List](https://github.com/ForsakenHarmony/preact-feather/tree/master/src/icons) - full list of svg icons.  
 [Awesome](https://github.com/ooade/awesome-preact) - awesome preact links.  
-[CoolTextAnimation](https://tobiasahlin.com/moving-letters/)
+[CoolTextAnimation](https://tobiasahlin.com/moving-letters/)  
+[ColorPalette](https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d90429)
+[MoreColorPalettes](https://coolors.co/browser/best/1)

@@ -1,6 +1,5 @@
 import { h, Component } from 'preact';
 import { Mail } from 'preact-feather';
-import style from './style';
 
 import * as data from '../../assets/content/general';
 

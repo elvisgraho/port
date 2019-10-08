@@ -18,17 +18,15 @@ button {
   -moz-appearance: none;
 }
 
-button:hover,
-button:focus {
+button:hover {
   background: $primary;
   color: $quaternary;
 }
 
 button:focus {
-  outline: 1px solid #fff;
-  outline-offset: -4px;
+  outline: none;
 }
 
 button:active {
-  transform: scale(0.99);
+  transform: scale(0.98);
 }
