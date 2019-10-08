@@ -10,7 +10,8 @@ export default class ContactBox extends Component {
   constructor() {
     super();
     this.state = {
-      visible: false
+      visible: false,
+      contactText: data.contact.text.split("\n")
     }
   }
 
@@ -37,7 +38,12 @@ export default class ContactBox extends Component {
         </div>
 
         <div class={"contact-box__info"}>
-          <p>{data.contact.text}</p>
+          <div>
+            {this.state.contactText.map((val) => {
+              return (<p>{val}</p>)
+            })}
+          </div>
+
           <button class="contact-box__copy" onClick={this.copyToClipboard}>
             {data.contact.clipboardText}
           </button>

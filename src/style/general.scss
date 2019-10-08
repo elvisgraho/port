@@ -1,11 +1,13 @@
+@import './colors.scss';
+
 button {
   display: inline-block;
   border: none;
   padding: .5rem 2rem;
   margin: 0;
   text-decoration: none;
-  background: #0069ed;
-  color: #ffffff;
+  background: $quaternary;
+  color: $primary;
   font-family: sans-serif;
   font-size: 1rem;
   cursor: pointer;
@@ -18,7 +20,8 @@ button {
 
 button:hover,
 button:focus {
-  background: #0053ba;
+  background: $primary;
+  color: $quaternary;
 }
 
 button:focus {

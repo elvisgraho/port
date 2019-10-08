@@ -1,8 +1,8 @@
 {
   "contact": {
-    "text": "bla bla bla",
+    "text": "Let us connect!\nemail@email.com",
     "email": "email@email.com",
-    "clipboardText": "Copy to clipboard",
+    "clipboardText": "Copy email",
     "btnText": "Contact me"
   }
 }

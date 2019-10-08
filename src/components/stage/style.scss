@@ -1,12 +1,13 @@
+@import '../../style/colors.scss';
+
 .stage {
   display: block;
   width: 100%;
   height: 52%;
 
-  background-color: red;
+  background-color: $primary;
   
 
   @include desktop {
-    background-color: plum;
   }
 }

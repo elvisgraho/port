@@ -1,9 +1,12 @@
+@import '../../style/colors.scss';
+
 .contact-box{
   position: fixed;
   width: 300px;
   height: 180px;
   right: -150px;
   bottom: -150px;
+  color: $quaternary;
 
   z-index: 90;
 
@@ -38,9 +41,11 @@
     justify-content: center;
     align-items: center;
 
-    background-color: pink;
-
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.5);
+    background-color: $tertiary;
+    
+    &:hover, &:focus{
+      background: $tertiaryP;
+    }
   }
 
 
@@ -56,11 +61,22 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     z-index: -1;
 
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5);
-    background-color: pink;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.4);
+    background-color: $tertiary;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin: 10px;
+      }
+    }
   }
 }

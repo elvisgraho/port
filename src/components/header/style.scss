@@ -1,3 +1,4 @@
+@import '../../style/colors.scss';
 $height: 50px;
 
 .header {
@@ -5,7 +6,7 @@ $height: 50px;
 	width: 100%;
 	height: $height;
 	padding: 0;
-	background: #673AB7;
+	background: $tertiary;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 	z-index: 50;
 }
@@ -31,9 +32,10 @@ $height: 50px;
 
 .header nav a:hover,
 .header nav a:active {
-	background: rgba(0,0,0,0.2);
+	background: $tertiaryP;
 }
 
 .header nav a.active {
-	background: rgba(0,0,0,0.4);
+	background: $quaternary;
+	color: $primary
 }
