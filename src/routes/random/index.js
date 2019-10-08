@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import style from './style';
 
 import * as skillsData from '../../assets/content/skills';
 
@@ -12,8 +11,13 @@ export default class Random extends Component {
 
 	render() {
 		return (
-			<div class={style.random}>
-				George
+			<div class="random">
+				<div class="random__large">
+					hl
+				</div>
+				<div class="random__small">
+					hs
+				</div>
 			</div>
 		);
 	}

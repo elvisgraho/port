@@ -1,5 +1,4 @@
 import { h, Component } from 'preact';
-import style from './style';
 
 import * as skillsData from '../../assets/content/skills';
 
@@ -11,8 +10,13 @@ export default class Hobbies extends Component {
 
 	render() {
 		return (
-			<div class={style.hobbies}>
-				hobbies
+			<div class="hobbies">
+				<div class="hobbies__small">
+					hs
+				</div>
+				<div class="hobbies__large">
+					hl
+				</div>
 			</div>
 		);
 	}

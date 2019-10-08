@@ -1,4 +1,5 @@
 @import '../../style/colors.scss';
+@import '../../style/mixins.scss';
 
 .skill-card {
   display: flex;
@@ -24,6 +25,15 @@
     margin: 0px 20px;
     margin-top: 20px;
   }
+
+  transition: margin .1s ease-in;
+
+  	
+	&:hover{
+    @include desktop {
+      margin-top: 5px;
+    }
+	}
 
   &-title {
     font-size: 27px;

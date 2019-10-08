@@ -6,7 +6,6 @@ import * as skillsData from '../../assets/content/skills';
 
 export default class Skills extends Component {
 
-
 	render() {
 		return (
 			<div class={style.skills}>
