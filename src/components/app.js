@@ -6,8 +6,9 @@ import ContactBox from './contactBox';
 import Stage from './stage';
 
 // Code-splitting is automated for routes
-import About from '../routes/about';
 import Skills from '../routes/skills';
+import Hobbies from '../routes/hobbies';
+import Random from '../routes/random';
 
 export default class App extends Component {
 
@@ -23,10 +24,9 @@ export default class App extends Component {
 
 				<div class="router-section">
 					<Router onChange={this.handleRoute}>
-						<About path="/" />
-						<Skills path="/skills" user="skills" />
-						<Skills path="/hobbies" user="hobbies" />
-						<Skills path="/random" user="random" />
+						<Skills path="/" />
+						<Hobbies path="/hobbies" />
+						<Random path="/random" />
 					</Router>
 				</div>
 

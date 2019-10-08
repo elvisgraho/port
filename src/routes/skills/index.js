@@ -7,7 +7,6 @@ import * as skillsData from '../../assets/content/skills';
 export default class Skills extends Component {
 
 
-	// Note: `user` comes from the URL, courtesy of our router
 	render() {
 		return (
 			<div class={style.skills}>

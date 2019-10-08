@@ -18,7 +18,7 @@ $height: 50px;
 
 .header nav {
 	font-size: 100%;
-	height: $height;
+	height: calc(#{$height} - 10px);
 
 	display: flex;
 	flex-direction: row;
@@ -26,6 +26,7 @@ $height: 50px;
 
 	@include small {
 	 justify-content: flex-start;
+	 height: $height;
 	}
 }
 
