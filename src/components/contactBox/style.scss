@@ -12,13 +12,12 @@
 
   z-index: 90;
 
-  transition: bottom .2s ease-in, right .2s ease-in, top .2s ease-in, left .2s ease-in;
+  transition: bottom .2s ease-in, right .2s ease-in, top .2s ease-in, left .2s ease-in, transform 1s ease-out;
 
   display: flex;
   flex-direction: column-reverse;
 
 	transform: translateY(-100%);
-	transition: transform 1s ease-out;
 
   @include small {
     width: 300px;

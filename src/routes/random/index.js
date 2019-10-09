@@ -1,4 +1,5 @@
 import { h, Component } from 'preact';
+import { Code, Sun } from 'preact-feather';
 
 import * as data from '../../assets/content/random';
 
@@ -38,7 +39,7 @@ export default class Random extends Component {
 		return (
 			<div class="random">
 				<div class="random__large">
-					<h2>{data.large.headline}</h2>
+					<h3>{data.large.headline}</h3>
 					<h5>{data.large.subheadline}</h5>
 					<div class="random__quote">
 						<p>{`"${this.state.currentQuote}"`}</p>
@@ -46,7 +47,19 @@ export default class Random extends Component {
 					</div>
 				</div>
 				<div class="random__small">
-					hs
+					<h3>{data.small.title}</h3>
+
+					<div class="random__info">
+						<div>
+							<Code />
+							<p>{data.small.stack}</p>
+						</div>
+						<div>
+							<Sun />
+							<p>{data.small.further}</p>
+						</div>
+					</div>
+
 				</div>
 			</div>
 		);

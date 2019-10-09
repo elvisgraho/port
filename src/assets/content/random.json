@@ -33,5 +33,10 @@
       "Here’s a bumper sticker I’d like to see: “We are the proud parents of a child who’s self-esteem is sufficient that he doesn’t need us promoting his minor scholastic achievements on the back of our car.”",
       "The future will soon be a thing of the past"
     ]
+  },
+  "small": {
+    "title": "For your information",
+    "stack": "This website is build using Preact, Sass and preact-feather library (for the icons) and it is hosted on DigitalOcean.",
+    "further": "I am a web developer with Computer Science degree and experience in this field. Please contact me if you are interensted."
   }
 }
