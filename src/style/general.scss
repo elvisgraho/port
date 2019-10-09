@@ -16,6 +16,8 @@ button {
               transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
+
+  border: 1px solid $quaternary;
 }
 
 button:hover {
