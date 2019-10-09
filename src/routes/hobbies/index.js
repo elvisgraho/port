@@ -17,7 +17,8 @@ export default class Hobbies extends Component {
 				galleryShift: 0,
 				galleryCount: hobbiesData.second.music.length - 1,
 				defaultWidth: 280,
-				currentAnimation: ""
+				currentAnimation: "",
+				spinIcon: undefined
 			}
 		} catch (e) {
 			// hobbiesData is undefined or whatever
@@ -26,10 +27,7 @@ export default class Hobbies extends Component {
 	}
 
 	timeoutId;
-
-	// 1 to 2 layout
-	// general info 1
-	// music 2
+	timeoutSpinId;
 
 	clickLeft = () => {
 		if (this.state.galleryShift > 0) {
@@ -71,10 +69,20 @@ export default class Hobbies extends Component {
 		}
 	}
 
-	componentWillUnmount() {
-		clearTimeout(this.timeoutId);
+
+	onClick = () => {
+		if (!this.state.spinIcon) {
+			this.setState((state) => ({ spinIcon: "spin-icon" }));
+			this.timeoutSpinId = setTimeout(() => {
+				this.setState((state) => ({ spinIcon: undefined }));
+			}, 1000);
+		}
 	}
 
+	componentWillUnmount() {
+		clearTimeout(this.timeoutId);
+		clearTimeout(this.timeoutSpinId);
+	}
 
 	render() {
 		return (
@@ -91,7 +99,7 @@ export default class Hobbies extends Component {
 				</div>
 				<div class="hobbies__large">
 					<h2 class="hobbies-title">
-						{hobbiesData.second.title} <Youtube />
+						{hobbiesData.second.title} <Youtube onClick={this.onClick} class={this.state.spinIcon ? this.state.spinIcon : ""} />
 					</h2>
 					<h5>{hobbiesData.second.subtitle}</h5>
 
