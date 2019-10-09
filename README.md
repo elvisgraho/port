@@ -26,4 +26,6 @@ For detailed explanation on how things work, checkout the [CLI Readme](https://g
 [Awesome](https://github.com/ooade/awesome-preact) - awesome preact links.  
 [CoolTextAnimation](https://tobiasahlin.com/moving-letters/)  
 [ColorPalette](https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d90429)
-[MoreColorPalettes](https://coolors.co/browser/best/1)
+[MoreColorPalettes](https://coolors.co/browser/best/1)  
+
+ToDO:  Big name anim  Falling balls anim canvas  George quotes and random page  animation between tabs

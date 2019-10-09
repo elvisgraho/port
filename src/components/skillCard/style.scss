@@ -29,11 +29,11 @@
   transition: margin .1s ease-in;
 
   	
-	&:hover{
-    @include desktop {
-      margin-top: 5px;
-    }
-	}
+	// &:hover{
+  //   @include desktop {
+  //     margin-top: 5px;
+  //   }
+	// }
 
   &-title {
     font-size: 27px;

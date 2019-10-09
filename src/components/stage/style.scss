@@ -5,10 +5,49 @@
   width: 100%;
   height: 52%;
   min-height: 430px;
+  overflow: hidden;
 
   background-color: $primary;
+
+  transform: translateY(-100%);
+  transition: transform 1s ease-out;
+
+  &--mounted {
+    transform: translateY(0%);
+  }
   
 
-  @include desktop {
+  &__title { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include small {
+
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 10px;
+
+      @include small {
+        font-size: 50px;
+        margin: 20px;
+      }
+  
+    }
+    h3 {
+      //font-style: italic;
+      margin: 5px;
+      font-size: 16px;
+
+      @include small {
+        font-size: 22px;
+        margin: 10px;
+      }
+    }
   }
 }

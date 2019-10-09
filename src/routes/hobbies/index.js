@@ -1,5 +1,7 @@
 import { h, Component } from 'preact';
 import { Youtube } from 'preact-feather';
+import { ArrowLeft } from 'preact-feather';
+import { ArrowRight } from 'preact-feather';
 
 import VideoCard from '../../components/videoCard';
 
@@ -57,7 +59,7 @@ export default class Hobbies extends Component {
 			this.setState((state) => { return { currentAnimation: "" } });
 			clearTimeout(this.timeoutId);
 			this.timeoutId = setTimeout(() => {
-				this.setState((state) => { return { currentAnimation: animName } }, 50);
+				this.setState((state) => { return { currentAnimation: animName } }, 20);
 			})
 		} else {
 			this.setState((state) => {
@@ -90,13 +92,17 @@ export default class Hobbies extends Component {
 					</h2>
 					<h5>{hobbiesData.second.subtitle}</h5>
 
-					<div class="hobbies-arrow hobbies-arrow--left" onClick={this.clickLeft}></div>
+					<div class="hobbies-arrow hobbies-arrow--left" onClick={this.clickLeft}>
+						<ArrowLeft size={30} />
+					</div>
 					<div class={`hobbies__music ${this.state.currentAnimation}`} style={`left: -${this.state.galleryShift}px;`}>
 						{hobbiesData.second.music && hobbiesData.second.music.map((song) => {
 							return <VideoCard title={song.title} subtitle={song.subtitle} imgSrc={song.imgSrc} />
 						})}
 					</div>
-					<div class="hobbies-arrow hobbies-arrow--right" onClick={this.clickRight}></div>
+					<div class="hobbies-arrow hobbies-arrow--right" onClick={this.clickRight}>
+						<ArrowRight size={30} />
+					</div>
 				</div>
 			</div>
 		);

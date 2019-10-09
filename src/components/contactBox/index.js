@@ -8,7 +8,18 @@ export default class ContactBox extends Component {
 
   state = {
     visible: false,
-    contactText: data.contact.text.split("\n")
+    contactText: data.contact.text.split("\n"),
+    class: ""
+  }
+
+  timeoutId;
+
+  componentDidMount() {
+    this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "contact-box--mounted" })) }, 0);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeoutId);
   }
 
   toggleVisibility = e => {
@@ -26,7 +37,7 @@ export default class ContactBox extends Component {
 
   render() {
     return (
-      <section class={"contact-box" + this.getStateClass()}>
+      <section class={`contact-box ${this.state.class} ${this.getStateClass()}`}>
 
         <div class={"contact-box__heading"} onClick={this.toggleVisibility}>
           <Mail size={20} />
