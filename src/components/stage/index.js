@@ -13,12 +13,13 @@ export default class Stage extends Component {
   timeoutId;
 
   componentDidMount() {
-    this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "stage--mounted" })) }, 0);
+    this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "stage--mounted" })) }, 10);
   }
 
   componentWillUnmount() {
     clearTimeout(this.timeoutId);
   }
+
 
   render() {
     return (

@@ -11,7 +11,7 @@ export default class Header extends Component {
 	timeoutId;
 
 	componentDidMount() {
-		this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "header--mounted" })) }, 0);
+		this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "header--mounted" })) }, 10);
 	}
 
 	componentWillUnmount() {

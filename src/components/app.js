@@ -12,6 +12,20 @@ import Random from '../routes/random';
 
 export default class App extends Component {
 
+	state = {
+		class: ""
+	}
+
+	timeoutId;
+
+	componentDidMount() {
+		this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "router-section--mounted" })) }, 10);
+	}
+
+	componentWillUnmount() {
+		clearTimeout(this.timeoutId);
+	}
+
 	handleRoute = e => {
 		this.currentUrl = e.url;
 	};
@@ -22,7 +36,7 @@ export default class App extends Component {
 				<Stage />
 				<Header />
 
-				<div class="router-section">
+				<div class={`router-section ${this.state.class}`}>
 					<Router onChange={this.handleRoute}>
 						<Skills path="/" />
 						<Hobbies path="/hobbies" />

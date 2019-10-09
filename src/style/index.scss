@@ -14,6 +14,8 @@ html, body {
 	-moz-osx-font-smoothing: grayscale;
 
 	font-family: 'Lato', 'Open Sans', sans-serif;
+
+  overflow-x: hidden;
 }
 
 * {
@@ -29,6 +31,14 @@ html, body {
 
 .router-section {
 	flex: 1;
+
+	transform: translateX(+100%);
+	transform-origin: top;
+	transition: transform 1s ease-out;
+	
+	&--mounted {
+		transform: none;
+	}
 }
 
 .visible {

@@ -56,11 +56,14 @@ export default class Hobbies extends Component {
 	applyAnimation(animName) {
 		//no more shift animation left
 		if (this.state.currentAnimation === animName) {
-			this.setState((state) => { return { currentAnimation: "" } });
+			this.setState((state) => ({ currentAnimation: "" }));
+
 			clearTimeout(this.timeoutId);
+
 			this.timeoutId = setTimeout(() => {
-				this.setState((state) => { return { currentAnimation: animName } }, 20);
-			})
+				this.setState((state) => ({ currentAnimation: animName }));
+			}, 20);
+
 		} else {
 			this.setState((state) => {
 				return { currentAnimation: animName }
