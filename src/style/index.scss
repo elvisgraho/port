@@ -14,8 +14,11 @@ html, body {
 	-moz-osx-font-smoothing: grayscale;
 
 	font-family: 'Lato', 'Open Sans', sans-serif;
+}
 
-  overflow-x: hidden;
+
+body {
+	overflow-x: hidden;
 }
 
 * {
