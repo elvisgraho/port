@@ -108,7 +108,7 @@ export default class Hobbies extends Component {
 					</div>
 					<div class={`hobbies__music ${this.state.currentAnimation}`} style={`left: -${this.state.galleryShift}px;`}>
 						{hobbiesData.second.music && hobbiesData.second.music.map((song) => {
-							return <VideoCard title={song.title} subtitle={song.subtitle} imgSrc={song.imgSrc} />
+							return <VideoCard title={song.title} subtitle={song.subtitle} imgSrc={song.imgSrc} videoUrl={song.videoUrl} />
 						})}
 					</div>
 					<div class="hobbies-arrow hobbies-arrow--right" onClick={this.clickRight}>

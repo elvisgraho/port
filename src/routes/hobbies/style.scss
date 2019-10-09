@@ -168,7 +168,7 @@
 	&-arrow{
 		position: absolute;
 		display: flex;
-		height: 35px;
+		height: 30px;
 		width: 70px;
 
 		cursor: pointer;
@@ -182,7 +182,7 @@
 		align-items: center;
 
 		@include small {
-			bottom: 79px;
+			bottom: 84px;
 			height: 80px;
 			width: 35px;
 		}
