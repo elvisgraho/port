@@ -14,11 +14,16 @@ export default class Random extends Component {
 		super();
 
 		this.state = {
-			currentQuote: this.randomQuote("", data.large.quotes)
+			currentQuote: this.randomQuote("", data.large.quotes),
+			spinIcon: undefined,
+			shakeIcon: undefined
 		}
 
 		this.setRandomQuote = this.setRandomQuote.bind(this);
 	}
+
+	timeoutSpinId;
+	timeoutShakeId;
 
 	randomQuote(currentQuote, list) {
 		let newList = [...list];
@@ -33,6 +38,29 @@ export default class Random extends Component {
 		if (data.large.quotes) {
 			this.setState((state) => ({ currentQuote: this.randomQuote(state.currentQuote, data.large.quotes) }));
 		}
+	}
+
+	spinAnimHandler = () => {
+		if (!this.state.spinIcon) {
+			this.setState((state) => ({ spinIcon: "spin-icon" }));
+			this.timeoutSpinId = setTimeout(() => {
+				this.setState((state) => ({ spinIcon: undefined }));
+			}, 1000);
+		}
+	}
+
+	shakeAnimHandler = () => {
+		if (!this.state.shakeIcon) {
+			this.setState((state) => ({ shakeIcon: "shake-icon" }));
+			this.timeoutShakeId = setTimeout(() => {
+				this.setState((state) => ({ shakeIcon: undefined }));
+			}, 1000);
+		}
+	}
+
+	componentWillUnmount() {
+		clearTimeout(this.timeoutSpinId);
+		clearTimeout(this.timeoutShakeId);
 	}
 
 	render() {
@@ -51,11 +79,11 @@ export default class Random extends Component {
 
 					<div class="random__info">
 						<div>
-							<Code />
+							<Code onClick={this.shakeAnimHandler} class={this.state.shakeIcon ? this.state.shakeIcon : ""} />
 							<p>{data.small.stack}</p>
 						</div>
 						<div>
-							<Sun />
+							<Sun onClick={this.spinAnimHandler} class={this.state.spinIcon ? this.state.spinIcon : ""} />
 							<p>{data.small.further}</p>
 						</div>
 					</div>

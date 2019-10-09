@@ -70,7 +70,7 @@ export default class Hobbies extends Component {
 	}
 
 
-	onClick = () => {
+	spinAnimHandler = () => {
 		if (!this.state.spinIcon) {
 			this.setState((state) => ({ spinIcon: "spin-icon" }));
 			this.timeoutSpinId = setTimeout(() => {
@@ -99,7 +99,7 @@ export default class Hobbies extends Component {
 				</div>
 				<div class="hobbies__large">
 					<h2 class="hobbies-title">
-						{hobbiesData.second.title} <Youtube onClick={this.onClick} class={this.state.spinIcon ? this.state.spinIcon : ""} />
+						{hobbiesData.second.title} <Youtube onClick={this.spinAnimHandler} class={this.state.spinIcon ? this.state.spinIcon : ""} />
 					</h2>
 					<h5>{hobbiesData.second.subtitle}</h5>
 

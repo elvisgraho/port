@@ -152,5 +152,32 @@
 		}
 	}
 
+	svg{
+    animation-duration: 1s;
+    animation-fill-mode: both;
+	}
+	
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+		100% { transform: translateY(0); }
+  }
+
+  .spin-icon {
+    transform-origin: center;
+    animation-name: spin;
+	}
+	
+	@keyframes shake {
+		10%, 90% { transform: translate3d(-1px, 0, 0); }
+		20%, 80% { transform: translate3d(2px, 0, 0); }
+		30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+		40%, 60% { transform: translate3d(3px, 0, 0); }
+  }
+
+  .shake-icon {
+    transform-origin: center;
+    animation-name: shake;
+  }
 
 }
