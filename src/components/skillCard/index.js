@@ -3,9 +3,11 @@ import { Anchor } from 'preact-feather';
 
 export default class SkillCard extends Component {
 
+  timeoutId;
+
   state = {
     swing: undefined,
-    swingCount: 0
+    swingCount: 0,
   }
 
   onClick = () => {
@@ -14,18 +16,23 @@ export default class SkillCard extends Component {
       if (this.state.swingCount > 0 && this.state.swingCount % 3 === 0) {
         this.setState((state) => ({ swing: "swing--big", swingCount: this.state.swingCount + 1 }));
 
-        setTimeout(() => {
+        this.timeoutId = setTimeout(() => {
           this.setState((state) => ({ swing: undefined }));
         }, 1000);
       } else {
         this.setState((state) => ({ swing: "swing", swingCount: this.state.swingCount + 1 }));
 
-        setTimeout(() => {
+        this.timeoutId = setTimeout(() => {
           this.setState((state) => ({ swing: undefined }));
         }, 1000);
       }
 
     }
+  }
+
+
+  componentWillUnmount() {
+    clearTimeout(this.timeoutId);
   }
 
   render() {
