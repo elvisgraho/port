@@ -9095,13 +9095,15 @@ var app__ref = Object(preact_min["h"])(stage_Stage, null);
 
 var app__ref2 = Object(preact_min["h"])(header_Header, null);
 
-var _ref3 = Object(preact_min["h"])(skills_Skills, { path: '/' });
+var _ref3 = Object(preact_min["h"])(
+	preact_router_es["Router"],
+	null,
+	Object(preact_min["h"])(skills_Skills, { path: '/' }),
+	Object(preact_min["h"])(hobbies_Hobbies, { path: '/hobbies' }),
+	Object(preact_min["h"])(random_Random, { path: '/random' })
+);
 
-var _ref4 = Object(preact_min["h"])(hobbies_Hobbies, { path: '/hobbies' });
-
-var _ref5 = Object(preact_min["h"])(random_Random, { path: '/random' });
-
-var _ref6 = Object(preact_min["h"])(contactBox_ContactBox, null);
+var _ref4 = Object(preact_min["h"])(contactBox_ContactBox, null);
 
 var app_App = function (_Component) {
 	app__inherits(App, _Component);
@@ -9116,9 +9118,7 @@ var app_App = function (_Component) {
 		}
 
 		return _ret = (_temp = (_this = app__possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
-			class: ""
-		}, _this.handleRoute = function (e) {
-			_this.currentUrl = e.url;
+			class: ''
 		}, _temp), app__possibleConstructorReturn(_this, _ret);
 	}
 
@@ -9127,7 +9127,7 @@ var app_App = function (_Component) {
 
 		this.timeoutId = setTimeout(function () {
 			_this2.setState(function () {
-				return { class: "router-section--mounted" };
+				return { class: 'router-section--mounted' };
 			});
 		}, 10);
 	};
@@ -9145,15 +9145,9 @@ var app_App = function (_Component) {
 			Object(preact_min["h"])(
 				'div',
 				{ 'class': 'router-section ' + this.state.class },
-				Object(preact_min["h"])(
-					preact_router_es["Router"],
-					{ onChange: this.handleRoute },
-					_ref3,
-					_ref4,
-					_ref5
-				)
+				_ref3
 			),
-			_ref6
+			_ref4
 		);
 	};
 

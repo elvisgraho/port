@@ -9,9 +9,7 @@ export default class Skills extends Component {
 	render() {
 		return (
 			<div class={style.skills}>
-				{skillsData.skills.map((skill) => {
-					return <SkillCard title={skill.title} text={skill.text} skills={skill.skills} />
-				})}
+				{skillsData.skills.map((skill) => <SkillCard title={skill.title} text={skill.text} skills={skill.skills} />)}
 			</div>
 		);
 	}
