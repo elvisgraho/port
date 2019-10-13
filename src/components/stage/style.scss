@@ -3,7 +3,8 @@
 .stage {
   display: block;
   width: 100%;
-  height: 430px;
+  height: 52%;
+  min-height: 430px;
   overflow: hidden;
 
   background-color: $primary;
@@ -23,6 +24,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    letter-spacing: 5px;
 
     @include small {
 
@@ -50,8 +53,9 @@
     }
   }
   &__canvas{
+    display: block;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    margin: 0px;
+    padding: 0px;
   }
 }

@@ -2,38 +2,38 @@
   "skills": [
     {
       "title": "Front-end",
-      "text": "visuals matter",
+      "text": "judging by the looks",
       "skills": [
-        "HTML5/CSS3/JS",
-        "Another1",
-        "Another2"
+        "HTML5 / CSS3",
+        "JS / jQuery",
+        "React / Angular "
       ]
     },
     {
       "title": "Back-end",
       "text": "got data?",
       "skills": [
-        "HTML5/CSS3/JS",
-        "Another1",
-        "Another2"
+        "NodeJS / Express",
+        "Redis / postgreSQL",
+        "Nginx / Server Setup"
       ]
     },
     {
       "title": "DevOps",
       "text": "and another cloud provider",
       "skills": [
-        "HTML5/CSS3/JS",
-        "Another1",
-        "Another2"
+        "Docker",
+        "Kubernetes",
+        "AWS / DigitalOcean"
       ]
     },
     {
       "title": "General",
       "text": "when trying too hard",
       "skills": [
-        "HTML5/CSS3/JS",
-        "Another1",
-        "Another2"
+        "Webpack / Gulp",
+        "React-Native",
+        "Debugging / Clean Code"
       ]
     }
   ]
