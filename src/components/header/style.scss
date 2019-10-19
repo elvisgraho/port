@@ -57,12 +57,7 @@ $height: 50px;
 	}
 }
 
-.header nav a:hover,
-.header nav a:active {
-	background: $tertiaryP;
-}
-
 .header nav a.active {
-	background-color: $tertiaryP;
-	//color: $primary;
+	background-color: white;
+	color: black;
 }

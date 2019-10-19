@@ -15,7 +15,7 @@ export default class ContactBox extends Component {
   timeoutId;
 
   componentDidMount() {
-    this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "contact-box--mounted" })) }, 10);
+    this.timeoutId = setTimeout(() => { this.setState(() => ({ class: "contact-box--mounted" })) }, 3000);
   }
 
   componentWillUnmount() {

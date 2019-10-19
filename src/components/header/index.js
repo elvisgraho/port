@@ -23,7 +23,7 @@ export default class Header extends Component {
 				<nav>
 					<Link activeClassName={'active'} href="/">Skills</Link>
 					<Link activeClassName={'active'} href="/hobbies">Hobbies</Link>
-					<Link activeClassName={'active'} href="/random">Random</Link>
+					<Link activeClassName={'active'} href="/more">More</Link>
 				</nav>
 			</header>
 		);

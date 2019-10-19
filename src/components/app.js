@@ -36,7 +36,7 @@ export default class App extends Component {
 					<Router>
 						<Skills path="/" />
 						<Hobbies path="/hobbies" />
-						<Random path="/random" />
+						<Random path="/more" />
 					</Router>
 				</div>
 

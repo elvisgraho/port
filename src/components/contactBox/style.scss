@@ -80,7 +80,8 @@
     background-color: $tertiary;
     
     &:hover, &:focus{
-      background: $tertiaryP;
+      background: white;
+      color: black;
     }
 
   }

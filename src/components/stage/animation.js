@@ -4,18 +4,27 @@ export default function animation(canvas) {
 	let context = canvas.getContext('2d');
 	let stageDom = document.getElementsByClassName('stage')[0];
 	let allRects = [];
+	let numberOfActiveBoxes = 20;
   
 	let setCanvasHeight = () => {
 		canvas.width = stageDom.offsetWidth;
 		canvas.height = stageDom.offsetHeight;
 		canvas.style.width = `${stageDom.offsetWidth}px`;
 		canvas.style.height = `${stageDom.offsetHeight}px`;
+
+		if(canvas.width < 900){
+			numberOfActiveBoxes = 10;
+		} else {
+			numberOfActiveBoxes = 20;
+		}
 	};
   
 	let generateRect = () => {
+		if(allRects.length >= numberOfActiveBoxes){ return; }
+
 		let randWidth = Math.random() * (30 - (10)) + (10);
 		let randX = Math.random() * ((canvas.width - randWidth) - (30)) + (30);
-		let randY = Math.random() * ((canvas.height - 200) - (50)) + (50);
+		let randY = Math.random() * ((canvas.height - 200) - (20)) + (20);
 
 		allRects.push(new Rect(
 			randX,
@@ -26,7 +35,7 @@ export default function animation(canvas) {
 	};
   
 	setCanvasHeight();
-	for (let i = 0; i< 20; i++){
+	for (let i = 0; i < numberOfActiveBoxes; i++){
 		generateRect();
 	}
 
@@ -40,10 +49,8 @@ export default function animation(canvas) {
 		allRects.forEach((rect, index, object) => {
 			rect.draw(context, canvas);
 
-			if (rect.deleteMe) {
-				object.splice(index, 1);
-				generateRect();
-			}
+			if (rect.deleteMe) { object.splice(index, 1); }
+			generateRect();
 		});
 
 	};

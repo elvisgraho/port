@@ -521,8 +521,8 @@ var _ref = Object(preact_min["h"])(
 	),
 	Object(preact_min["h"])(
 		match["Link"],
-		{ activeClassName: 'active', href: '/random' },
-		'Random'
+		{ activeClassName: 'active', href: '/more' },
+		'More'
 	)
 );
 
@@ -8239,7 +8239,7 @@ var contactBox_ContactBox = function (_Component) {
       _this2.setState(function () {
         return { class: "contact-box--mounted" };
       });
-    }, 10);
+    }, 3000);
   };
 
   ContactBox.prototype.componentWillUnmount = function componentWillUnmount() {
@@ -8294,24 +8294,35 @@ function animation(canvas) {
 	var context = canvas.getContext('2d');
 	var stageDom = document.getElementsByClassName('stage')[0];
 	var allRects = [];
+	var numberOfActiveBoxes = 20;
 
 	var setCanvasHeight = function setCanvasHeight() {
 		canvas.width = stageDom.offsetWidth;
 		canvas.height = stageDom.offsetHeight;
 		canvas.style.width = stageDom.offsetWidth + 'px';
 		canvas.style.height = stageDom.offsetHeight + 'px';
+
+		if (canvas.width < 900) {
+			numberOfActiveBoxes = 10;
+		} else {
+			numberOfActiveBoxes = 20;
+		}
 	};
 
 	var generateRect = function generateRect() {
+		if (allRects.length >= numberOfActiveBoxes) {
+			return;
+		}
+
 		var randWidth = Math.random() * (30 - 10) + 10;
 		var randX = Math.random() * (canvas.width - randWidth - 30) + 30;
-		var randY = Math.random() * (canvas.height - 200 - 50) + 50;
+		var randY = Math.random() * (canvas.height - 200 - 20) + 20;
 
 		allRects.push(new Rect(randX, randY, randWidth, '204, 24, 30'));
 	};
 
 	setCanvasHeight();
-	for (var i = 0; i < 20; i++) {
+	for (var i = 0; i < numberOfActiveBoxes; i++) {
 		generateRect();
 	}
 
@@ -8325,8 +8336,8 @@ function animation(canvas) {
 
 			if (rect.deleteMe) {
 				object.splice(index, 1);
-				generateRect();
 			}
+			generateRect();
 		});
 	};
 
@@ -9100,7 +9111,7 @@ var _ref3 = Object(preact_min["h"])(
 	null,
 	Object(preact_min["h"])(skills_Skills, { path: '/' }),
 	Object(preact_min["h"])(hobbies_Hobbies, { path: '/hobbies' }),
-	Object(preact_min["h"])(random_Random, { path: '/random' })
+	Object(preact_min["h"])(random_Random, { path: '/more' })
 );
 
 var _ref4 = Object(preact_min["h"])(contactBox_ContactBox, null);
