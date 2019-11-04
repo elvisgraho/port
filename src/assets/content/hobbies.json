@@ -14,19 +14,19 @@
     "subtitle": "prepare your ears",
     "music": [
       {
-        "imgSrc": "http://i3.ytimg.com/vi/qhz4Ju7UT3I/maxresdefault.jpg",
+        "imgSrc": "../../assets/images/fillit.jpg",
         "videoUrl": "https://www.youtube.com/watch?v=qhz4Ju7UT3I",
         "title": "Fill it",
         "subtitle": "fffff"
       },
       {
-        "imgSrc": "http://i3.ytimg.com/vi/TnhCLsqF8UE/maxresdefault.jpg",
+        "imgSrc": "../../assets/images/decisions.jpg",
         "videoUrl": "https://www.youtube.com/watch?v=TnhCLsqF8UE",
         "title": "Decisions",
         "subtitle": "fffff"
       },
       {
-        "imgSrc": "http://i3.ytimg.com/vi/aeXX8IYZ1lU/maxresdefault.jpg",
+        "imgSrc": "../../assets/images/hello.jpg",
         "videoUrl": "https://www.youtube.com/watch?v=aeXX8IYZ1lU",
         "title": "Hello",
         "subtitle": "fffff"
