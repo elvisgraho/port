@@ -36,7 +36,7 @@
   },
   "small": {
     "title": "For your information",
-    "stack": "This website is build using Preact, Sass and preact-feather library (for the icons).",
-    "further": "I am a web developer with Computer Science degree and experience in this field. Please contact me if you are interensted."
+    "stack": "This website is built using Preact, Sass and preact-feather library (for the icons).",
+    "further": "I am a web developer with Computer Science degree and experience in this field. Please contact me if you are interested."
   }
 }

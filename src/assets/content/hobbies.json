@@ -14,6 +14,18 @@
     "subtitle": "prepare your ears",
     "music": [
       {
+        "imgSrc": "../../assets/images/Falling.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=N8hDSK-68DU",
+        "title": "Falling",
+        "subtitle": "fffff"
+      },
+      {
+        "imgSrc": "../../assets/images/Synstatic.jpg",
+        "videoUrl": "https://www.youtube.com/watch?v=8rjmNnHpxWE",
+        "title": "Synstatic",
+        "subtitle": "fffff"
+      },
+      {
         "imgSrc": "../../assets/images/fillit.jpg",
         "videoUrl": "https://www.youtube.com/watch?v=qhz4Ju7UT3I",
         "title": "Fill it",
